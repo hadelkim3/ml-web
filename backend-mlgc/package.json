@@ -1,5 +1,5 @@
 {
-  "name": "backend",
+  "name": "web-backend",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -13,7 +13,9 @@
   "dependencies": {
     "@google-cloud/firestore": "^7.11.0",
     "@hapi/hapi": "^21.3.12",
+    "@hono/node-server": "^1.13.7",
     "@tensorflow/tfjs-node": "^4.22.0",
-    "dotenv": "^16.4.7"
+    "dotenv": "^16.4.7",
+    "multer": "^1.4.5-lts.1"
   }
 }
