@@ -9,8 +9,8 @@ COPY . .
 
 ENV APP_ENV=production
 ENV APP_PORT=3000
-ENV MODEL_URL="https://storage.googleapis.com/cancer-predict-storag/model.json"
-ENV PROJECT_ID="submissionmlgc-hadellya"
+ENV MODEL_URL="https://storage.googleapis.com/cancer-prediction-storge/model.json"
+ENV PROJECT_ID="submissionmlgc-anastasia"
 
 CMD [ "npm", "start" ]
 
