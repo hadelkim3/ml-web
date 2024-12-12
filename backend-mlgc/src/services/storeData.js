@@ -1,20 +1,22 @@
 const { Firestore } = require('@google-cloud/firestore');
 const path = require('path');
 
-const pathKey = path.resolve('./submissionmlgc-hadellya-ed45eec7cc45.json')
+const pathKey = path.resolve('./submissionmlgc-anastasia-b9c0d24486c0.json')
      
 async function storeData(id, data) {
 
   try {
     const db = new Firestore({
-      projectId: 'submissionmlgc-hadellya',
+      projectId: 'submissionmlgc-anastasia',
       keyFilename: pathKey,
     });
  
     const predictCollection = db.collection('predictions');
-    return predictCollection.doc(id).set(data);
-  }catch(error) {
-    console.error(error);
+    console.log('Storing data to Firestore with id:', id);
+    await predictCollection.doc(id).set(data);
+    console.log('Data successfully stored');
+  } catch (error) {
+    console.error('Error storing data:', error);
   }
 }
  
